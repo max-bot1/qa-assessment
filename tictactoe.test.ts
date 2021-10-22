@@ -1,4 +1,4 @@
-import { Builder, Capabilities, By } from "selenium-webdriver"
+import { Builder, Capabilities, By, Button } from "selenium-webdriver"
 
 const chromedriver = require('chromedriver')
 
@@ -18,3 +18,16 @@ test('I can start a game', async () => {
     await button.click();
     
 });
+
+test('I can click the first square', async () => {
+    let square0 = driver.findElement(By.id('cell-0'))
+    await square0.click()
+})
+test('I can click the first square', async () => {
+    let square2 = driver.findElement(By.id('cell-2'))
+    await square2.click()
+})
+test('I can click the first square', async () => {
+    let square6 = driver.findElement(By.id('cell-6'))
+    await square6.click()
+})
